@@ -1,135 +1,228 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>🌸 Anime VPN</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(circle at top, rgba(255,182,193,.4), transparent 40%),
-    linear-gradient(135deg,#6a11cb,#2575fc,#ff9a9e);
-  z-index:-2;
-}
-.glass{
-  background:rgba(255,255,255,.15);
-  backdrop-filter:blur(16px);
-  border:1px solid rgba(255,255,255,.25);
-}
-.anime-card{
-  transition:.4s;
-}
-.anime-card:hover{
-  transform:translateY(-6px) scale(1.03);
-  box-shadow:0 25px 60px rgba(255,182,193,.6);
-}
-.toast{
-  position:fixed;
-  bottom:100px;
-  left:50%;
-  transform:translateX(-50%);
-  background:rgba(0,0,0,.7);
-  padding:12px 20px;
-  border-radius:999px;
-  font-size:14px;
-  opacity:0;
-  transition:.4s;
-  z-index:50;
-}
-.toast.show{opacity:1;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริษัท เน็ตซ่า จำกัด | Netsa Co., Ltd.</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e3a8a 0%, #4338ca 100%);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-800">
 
-<body class="text-white min-h-screen pb-28">
+    <nav class="bg-white shadow-md fixed w-full z-50 top-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer">
+                        <div class="w-10 h-10 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                            N
+                        </div>
+                        <span class="font-bold text-2xl text-gray-900 tracking-wide">NETSA<span class="text-brand-500">.</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-brand-600 font-medium transition duration-300">หน้าแรก</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-600 font-medium transition duration-300">บริการของเรา</a>
+                    <a href="#about" class="text-gray-600 hover:text-brand-600 font-medium transition duration-300">เกี่ยวกับเรา</a>
+                    <a href="#contact" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-lg shadow-brand-500/30">ติดต่อเรา</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-<!-- Header -->
-<header class="glass mx-4 mt-4 rounded-2xl">
-  <div class="px-6 py-4 flex justify-between items-center">
-    <h1 class="text-2xl font-bold">🌸 Anime VPN</h1>
-    <span class="text-sm opacity-70">Premium</span>
-  </div>
-</header>
+    <section id="home" class="hero-gradient pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    ยกระดับธุรกิจของคุณด้วย<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-300">เทคโนโลยีแห่งอนาคต</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-10 font-light">
+                    บริษัท เน็ตซ่า จำกัด ผู้ให้บริการโซลูชันด้านไอทีและเครือข่ายครบวงจร พร้อมขับเคลื่อนองค์กรของคุณให้ก้าวไกลในยุคดิจิทัล
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#services" class="bg-white text-brand-900 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 shadow-xl">
+                        ดูบริการของเรา
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-brand-900 transition duration-300">
+                        ปรึกษาผู้เชี่ยวชาญฟรี
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- 🔐 PORT INFO (ใส่แล้ว) -->
-<section class="px-6 py-6">
-  <div class="glass rounded-3xl p-5 shadow-lg">
-    <h3 class="text-lg font-semibold mb-4">🔐 ข้อมูลพอร์ต</h3>
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">บริการที่ตอบโจทย์ทุกความต้องการ</h3>
+            </div>
 
-    <div class="space-y-3 text-sm">
-      <div class="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3">
-        <span>🐻 DROPBEAR PORTA</span>
-        <span class="font-bold text-pink-300">143</span>
-      </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 text-brand-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Network Solutions</h4>
+                    <p class="text-gray-600">ออกแบบและวางระบบเครือข่ายภายในองค์กรที่มีความเสถียร ปลอดภัย และรองรับการขยายตัวในอนาคต</p>
+                </div>
 
-      <div class="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3">
-        <span>🔒 SSL PORTA</span>
-        <span class="font-bold text-green-300">443</span>
-      </div>
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Cloud Services</h4>
+                    <p class="text-gray-600">บริการย้ายระบบขึ้น Cloud เพื่อความคล่องตัวในการทำงาน พร้อมดูแลความปลอดภัยของข้อมูลขั้นสูงสุด</p>
+                </div>
 
-      <div class="flex justify-between items-center bg-white/10 rounded-xl px-4 py-3">
-        <span>🌐 PROXY SOCKS PORTA</span>
-        <span class="font-bold text-purple-300">8080</span>
-      </div>
-    </div>
-  </div>
-</section>
+                <div class="card-hover bg-gray-50 rounded-2xl p-8 transition duration-300 border border-gray-100">
+                    <div class="w-14 h-14 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-gray-900 mb-4">Software Development</h4>
+                    <p class="text-gray-600">พัฒนาแอปพลิเคชันและเว็บไซต์ที่ออกแบบมาเพื่อตอบโจทย์กระบวนการทำงานเฉพาะด้านของธุรกิจคุณ</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Server Card -->
-<section class="px-6 pb-6" id="serversList"></section>
+    <section id="about" class="py-20 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="ทีมงาน Netsa" class="rounded-2xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">About Us</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">พันธมิตรด้านไอทีที่คุณไว้วางใจได้</h3>
+                    
+                    <div class="bg-white p-5 rounded-xl border-l-4 border-brand-500 shadow-sm mb-6">
+                        <p class="text-gray-700 italic">
+                            "เราก่อตั้งบริษัทนี้ขึ้นมาด้วยความมุ่งมั่นที่จะนำเทคโนโลยีที่ทันสมัยที่สุด มาช่วยปลดล็อกศักยภาพทางธุรกิจให้กับลูกค้าของเรา"
+                        </p>
+                        <p class="text-brand-600 font-semibold mt-2">— พีรศักดิ์มูฮัมหมัดเจฟรี สาแม (ผู้ก่อตั้งบริษัท)</p>
+                    </div>
 
-<!-- Toast -->
-<div id="toast" class="toast">ข้อความ</div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        บริษัท เน็ตซ่า จำกัด ให้บริการโซลูชันด้านไอทีแบบครบวงจร เรามีทีมวิศวกรและผู้เชี่ยวชาญที่มีประสบการณ์ยาวนาน พร้อมดูแลระบบของคุณตลอด 24 ชั่วโมง
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> ทีมงานมืออาชีพที่มีประสบการณ์กว่า 10 ปี
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> บริการดูแลหลังการขายยอดเยี่ยม (SLA 99.9%)
+                        </li>
+                        <li class="flex items-center text-gray-700">
+                            <i class="fa-solid fa-circle-check text-green-500 mr-3"></i> โซลูชันที่ปรับแต่งได้ตามงบประมาณขององค์กร
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-const server = {
-  name: "SIM AIS กันรั่ว",
-  ip: "bkk.vpn.smilevpn.net",
-  speed: "100mbps",
-  link: "nm-ssh://AZ7ixDRKpWK9QwAkYPRdJ9reuzln770/MhK1GYgDLZKokA2AaKeML6gkaZnRJvOu0cxSm63VzC25fCjlUm40+Gd4q9sVROXVDzgDFU3Ihyl9j5vmsK7LP53HrnpTrAEc2s7rfBhDxAiRZmXT7FFqEkcvzDskAv+QuMMIdQ6CDrZ+XS3Bj8kpfsmK/sSYrcmshSG97S7DWWF1ovefdgV0c9jo+VoGXzR/NkN8IVRHrp2k6r9uM5XQXsIwrt82TDKs"
-};
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-8">พร้อมที่จะเติบโตไปกับเราหรือยัง?</h2>
+            <p class="text-xl text-gray-600 mb-10">ให้ เน็ตซ่า เป็นส่วนหนึ่งในความสำเร็จของธุรกิจคุณ ติดต่อเราวันนี้เพื่อรับคำปรึกษาฟรี</p>
+            
+            <div class="bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-100 max-w-2xl mx-auto">
+                <form class="space-y-6 text-left">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ชื่อ - นามสกุล</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="ระบุชื่อของคุณ">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">อีเมล</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="example@company.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">ข้อความ</label>
+                        <textarea rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition" placeholder="บอกรายละเอียดเบื้องต้นเกี่ยวกับสิ่งที่คุณต้องการ..."></textarea>
+                    </div>
+                    <button type="button" class="w-full bg-brand-600 hover:bg-brand-700 text-white font-bold py-4 rounded-lg transition duration-300 shadow-lg">
+                        ส่งข้อความ
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 
-function showToast(msg){
-  const t=document.getElementById("toast");
-  t.textContent=msg;
-  t.classList.add("show");
-  setTimeout(()=>t.classList.remove("show"),2500);
-}
-
-function openNetMod(){
-  window.location.href = server.link;
-  setTimeout(()=>{
-    navigator.clipboard.writeText(server.link).then(()=>{
-      showToast("📋 เปิดแอปไม่ได้ → คัดลอกลิงก์ให้แล้ว");
-    });
-  },1000);
-}
-
-document.getElementById("serversList").innerHTML = `
-  <div class="glass anime-card rounded-3xl p-6 max-w-md mx-auto">
-    <h2 class="text-xl font-semibold">🇹🇭 SIM AIS กันรั่ว</h2>
-    <p class="text-sm mt-1 text-white/80">${server.ip}</p>
-
-    <div class="mt-3">
-      <span class="px-3 py-1 rounded-full text-xs bg-green-400/30 text-green-200">
-        ${server.speed}
-      </span>
-    </div>
-
-    <button onclick="openNetMod()"
-      class="mt-5 w-full py-3 rounded-xl font-semibold
-             bg-gradient-to-r from-purple-400 to-pink-500
-             hover:scale-105 transition">
-      🚀 คัดลอกโค้ด
-    </button>
-  </div>
-`;
-</script>
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="w-8 h-8 bg-brand-500 rounded flex items-center justify-center font-bold text-white">N</div>
+                        <span class="font-bold text-xl tracking-wide">NETSA.</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        ขับเคลื่อนธุรกิจด้วยนวัตกรรมและเทคโนโลยีที่ล้ำสมัย เพื่อสร้างรากฐานที่มั่นคงให้กับองค์กรของคุณ
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">ข้อมูลติดต่อ</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-location-dot"></i> 123 อาคารเทคทาวเวอร์ ชั้น 15 ถนนสุขุมวิท กรุงเทพฯ 10110</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-phone"></i> 02-XXX-XXXX</li>
+                        <li class="flex items-center gap-3"><i class="fa-solid fa-envelope"></i> contact@netsa.co.th</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-6">ติดตามเรา</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-500 transition duration-300">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition duration-300">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2026 บริษัท เน็ตซ่า จำกัด (Netsa Co., Ltd.) โดย พีรศักดิ์มูฮัมหมัดเจฟรี สาแม
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
